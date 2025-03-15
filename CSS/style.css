@@ -11,13 +11,14 @@
 
 #navbar{
     display: flex;
+    border-radius: 0%;
     width: 100%;
     justify-content: space-around;
     position: fixed; /* Mantém a navbar fixa no topo */
     top: 0;
     left: 0;
     z-index: 1000; /* Garante que fique acima de outros elementos */
-    background-color: #6C63FF;
+    background-color: #babac0;
     padding: 1rem 1rem;
 }
 
