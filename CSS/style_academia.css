@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     font-family: "Work Sans", serif;
     margin: 0;
     padding: 0;
@@ -9,11 +9,11 @@
 }
 
 /* NAVBAR */
-
-#navbar{
+#navbar {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -38,7 +38,7 @@
     color: white;
 }
 
-#navbar ul {
+#nav-links {
     list-style: none;
     display: flex;
     align-items: center;
@@ -46,20 +46,57 @@
     font-size: 1.3rem;
 }
 
-#navbar ul li {
+#nav-links li {
     border: 0.25rem solid transparent;
     border-radius: 1.5rem;
     transition: border-color 0.3s;
 }
 
-#navbar ul a{
+#nav-links a {
     text-decoration: none;
     color: white;
 }
 
-/* BEM VINDO */
+/* Ícone do menu de hambúrguer */
+#menu-icon {
+    display: none; /* Escondido por padrão */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
 
-#bemvindo{
+#menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Responsividade: Mostrar o ícone do menu e ajustar o menu de navegação */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: flex; /* Mostrar o ícone do menu */
+    }
+
+    #nav-links {
+        display: none; /* Esconder o menu de navegação */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Ajuste conforme a altura da navbar */
+        left: 0;
+        width: 100%;
+        background-color: #6C63FF;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #nav-links.active {
+        display: flex; /* Mostrar o menu quando estiver ativo */
+    }
+}
+
+/* BEM VINDO */
+#bemvindo {
     margin-top: 6rem;
     display: flex;
     flex-direction: column;
@@ -75,8 +112,7 @@
 }
 
 /* TREINOS */
-
-.treinos{
+.treinos {
     text-align: center;
     padding: 80px 20px;
     background-color: white;
@@ -88,7 +124,7 @@
     margin-bottom: 30px;
 }
 
-.cards{
+.cards {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -96,7 +132,7 @@
     margin-top: 3rem;
 }
 
-.card{
+.card {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     width: 300px;
     display: flex;
@@ -125,7 +161,7 @@
     color: #555;
 }
 
-.card a{
+.card button {
     border: 4px solid #6C63FF;
     border-radius: 2rem;
     background-color: #6C63FF;
@@ -133,15 +169,15 @@
     padding: 0.5rem 1rem;
     text-decoration: none;
     transition: background-color 0.3s, border-color 0.3s;
+    cursor: pointer;
 }
 
-.card a:hover {
+.card button:hover {
     background-color: #4f4ab3;
     border-color: #4f4ab3;
 }
 
 /* FOOTER */
-
 .rodape {
     background-color: #d3d3d3;
     margin-top: 3rem;
@@ -153,3 +189,27 @@
     font-size: 1rem;
     color: #333;
 }
+
+/* Adicionado: transição pro menu mobile */
+#nav-links.active {
+    display: flex;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+

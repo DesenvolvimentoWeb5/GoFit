@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoFit - Treinos</title>
-    <link rel="stylesheet" href="../CSS/style_academia.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoFit - Treinos</title>
+  <link rel="stylesheet" href="../CSS/style_academia.css">
 </head>
+
 <body>
 
-    <nav id="navbar">
-        <div class="logo">
-            <img src="../IMG/levantamento-de-peso.png" alt="GoFit Logo">
-            <a href="../index.html">GoFit</a>
-        </div>
-        <ul>
-            <li><a href="academia.html">Academia</a></li>
-            <li><a href="#">Nutrição</a></li>
-            <li><a href="calculadoras.html">Calculadoras</a></li>
-            <li><a href="#">Conteúdos</a></li>
-        </ul>
-    </nav>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="logo">
+      <img src="../IMG/levantamento-de-peso.png" alt="GoFit Logo">
+      <a href="../index.html">GoFit</a>
+    </div>
 
-    <section class="treinos">
-        <h1>Treinos de Academia</h1>
-        <div class="cards">
-            <div class="card">
-                <h3>Emagrecimento</h3>
-                <p>Treinos de alta intensidade para queimar gordura e melhorar a resistência.</p>
-                <button onclick="downloadTreino('emagrecimento')">Saiba mais</button>
-            </div>
-            <div class="card">
-                <h3>Ganho de Massa</h3>
-                <p>Exercícios com foco em hipertrofia para aumentar a massa muscular.</p>
-                <button onclick="downloadTreino('massa')">Saiba mais</button>
-            </div>
-            <div class="card">
-                <h3>Definição</h3>
-                <p>Treinos combinando força e resistência para um corpo definido.</p>
-                <button onclick="downloadTreino('definicao')">Saiba mais</button>
-            </div>
-        </div>
-    </section>
+    <div id="menu-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-    <footer class="rodape">
-        <p>© 2024 GoFit. All rights reserved.</p>
-        <p>Informações</p>
-    </footer>
+    <ul id="nav-links">
+      <li><a href="academia.html">Academia</a></li>
+      <li><a href="#">Nutrição</a></li>
+      <li><a href="calculadoras.html">Calculadoras</a></li>
+      <li><a href="#">Conteúdos</a></li>
+    </ul>
+  </nav>
 
-    <script src="../JS/script_academia.js"></script>
+  <!-- TREINOS -->
+  <section class="treinos">
+    <h1>Treinos de Academia</h1>
+    <div class="cards">
+      <div class="card">
+        <h3>Emagrecimento</h3>
+        <p>Treinos de alta intensidade para queimar gordura e melhorar a resistência.</p>
+        <button onclick="downloadTreino('emagrecimento')">Download Treino</button>
+      </div>
+      <div class="card">
+        <h3>Ganho de Massa</h3>
+        <p>Exercícios com foco em hipertrofia para aumentar a massa muscular.</p>
+        <button onclick="downloadTreino('massa')">Download Treino</button>
+      </div>
+      <div class="card">
+        <h3>Definição</h3>
+        <p>Treinos combinando força e resistência para um corpo definido.</p>
+        <button onclick="downloadTreino('definicao')">Download Treino</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="rodape">
+    <p>© 2024 GoFit. All rights reserved.</p>
+    <p>Informações</p>
+  </footer>
+
+  <script src="../JS/script_academia.js"></script>
 </body>
 </html>

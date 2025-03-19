@@ -1,3 +1,11 @@
+// Função para abrir e fechar o menu mobile
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    const menuIcon = document.getElementById('menu-icon');
+    navLinks.classList.toggle('active');
+    menuIcon.classList.toggle('active');
+}
+
 function downloadTreino(tipo) {
     let conteudo = "";
 
@@ -126,3 +134,4 @@ Sexta-feira:
     link.click();
     document.body.removeChild(link);
 }
+
