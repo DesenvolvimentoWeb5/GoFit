@@ -32,4 +32,23 @@ document.addEventListener('DOMContentLoaded', function () {
       smoothScroll('#bemvindo', 1300); // duração de 3000ms para uma rolagem mais lenta
     });
   }
+
+    // Animação para o bloco de texto: vem de cima
+    ScrollReveal().reveal('.sobre-nos-texto, .nutri-inicial-texto, .info-nutri-texto, .info-dieta-texto', {
+      origin: 'top',  
+      distance: '50px',
+      duration: 1000,
+      easing: 'ease-in-out'
+    });
+  
+    // Animação para a imagem: vem de baixo
+    // Aqui, usamos o seletor que pega a imagem que está fora do .sobre-nos-texto
+    ScrollReveal().reveal('.sobre-nos > img, #nutri-inicial > img, #info-nutri > img, #info-dieta > img', {
+      origin: 'bottom',
+      distance: '50px',
+      duration: 1000,
+      easing: 'ease-in-out'
+    });
+  
+
 });
