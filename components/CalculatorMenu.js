@@ -16,8 +16,8 @@ function CalculatorMenu({ onSelect }) {
                         key={calc.id}
                         onClick={() => onSelect(calc.id)}
                         className="px-6 py-3 text-white font-bold uppercase rounded-full 
-                                 bg-gradient-to-r from-cyan-400 to-blue-500 
-                                 hover:from-cyan-500 hover:to-blue-600
+                                 bg-gradient-to-r from-indigo-400 to-indigo-600
+                                 hover:from-purple-400 hover:to-purple-700
                                  transform hover:scale-105 transition-all
                                  shadow-lg hover:shadow-xl"
                         data-name={`calculator-button-${calc.id}`}

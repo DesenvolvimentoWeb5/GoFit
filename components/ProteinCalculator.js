@@ -24,10 +24,10 @@ function ProteinCalculator() {
 
         return (
             <div className="calculator-container max-w-md mx-auto" data-name="protein-calculator">
-                <div className="flex items-center justify-center mb-6">
+                <div className="flex justify-center mb-6">
                     <h2 className="calculator-title">Calculadora de Proteína</h2>
                     <button 
-                        className="info-button"
+                        className="info-button mt-1.5"
                         onClick={() => setShowInfo(true)}
                         data-name="protein-info-button"
                     >

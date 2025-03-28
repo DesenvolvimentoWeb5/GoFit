@@ -24,14 +24,14 @@
 }
 
 .nav-logo img {
-    height: 30px;
+    height: 48px;
     margin-right: 0.5rem;
 }
 
 .nav-logo span {
     color: white;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.9rem;
+    margin-left: 10px;
 }
 
 .nav-links {
@@ -45,7 +45,7 @@
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 0.5rem 1rem;
     border-radius: 1.5rem;
     transition: background-color 0.2s;
@@ -55,6 +55,43 @@
     background-color: #5548d9;
 }
 
+/* Estilização do dropdown */
+.dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #5548d9;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown li {
+    list-style: none;
+}
+
+.dropdown a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.2s;
+}
+
+.dropdown a:hover {
+    background-color: #6C63FF;
+}
+
+/* Exibir dropdown ao passar o mouse */
+.nav-links li:hover .dropdown {
+    display: block;
+}
+
+/* Footer */
 .footer {
     background-color: #6C63FF;
     color: white;
@@ -66,4 +103,23 @@
 .footer p {
     margin: 0.5rem 0;
     font-size: 0.875rem;
+}
+
+/* Adicione isso ao CSS */
+.nav-links li {
+    position: relative; /* Garante que o dropdown fique alinhado ao item correto */
+}
+
+.dropdown {
+    width: 100%; /* Largura do dropdown */
+    background: #6C63FF; /* Mesma cor da navbar */
+    position: absolute;
+    top: 100%; /* Posiciona o dropdown abaixo do item da navbar */
+    left: 0;
+    z-index: 999;
+    display: none;
+    border-radius: 0 0 1.5rem 1.5rem; /* Bordas arredondadas na parte inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar o dropdown */
+    padding: 0.5rem 0; /* Espaçamento interno */
+    
 }

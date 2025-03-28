@@ -33,10 +33,10 @@ function BodyFatCalculator() {
 
         return (
             <div className="calculator-container max-w-md mx-auto" data-name="bodyfat-calculator">
-                <div className="flex items-center justify-center mb-6">
+                <div className="flex justify-center mb-6">
                     <h2 className="calculator-title">Calculadora de Gordura Corporal</h2>
                     <button 
-                        className="info-button"
+                        className="info-button mt-1.5"
                         onClick={() => setShowInfo(true)}
                         data-name="bodyfat-info-button"
                     >
